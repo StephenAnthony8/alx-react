@@ -1,0 +1,68 @@
+/* root */
+html, body, #root, .App {
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+
+/* App */
+.App {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+/* App-header */
+.App-header {
+    display: flex;
+    flex-direction: row;
+    height: calc(170px + 1vh);
+    border-bottom: solid #f41c43 4px;
+    align-items: center;
+}
+
+.App-header img {
+    height: 10rem;
+}
+
+.App-header h1 {
+    padding: 0.5em;
+    color: #f41c43;
+    font-family: 'Helvetica';
+}
+
+/* App-body */
+.App-body {
+    margin: 2em;
+    flex-grow: 1;
+    padding-top: 0.5em;
+    font-family: sans-serif;
+}
+
+#email {
+    margin-right: 4px;
+}
+
+#password {
+    margin-right: 4px;
+}
+
+/* App-footer */
+.App-footer {
+    position: absolute;
+    bottom: 0; 
+    border-top: solid #f41c43 4px;
+    height: 3.2em;
+    width: 100%;
+    text-align: center;
+}
+
+.App-footer p {
+    margin: 0.5em auto;
+    font-style:italic;
+    font-family: sans-serif;
+}
