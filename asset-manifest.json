@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/alx-react/0x01-react_intro/task_4/static/css/main.e44a189a.css",
-    "main.js": "/alx-react/0x01-react_intro/task_4/static/js/main.44bfe1af.js",
-    "static/js/453.59b8a61b.chunk.js": "/alx-react/0x01-react_intro/task_4/static/js/453.59b8a61b.chunk.js",
-    "static/media/holberton-logo.jpg": "/alx-react/0x01-react_intro/task_4/static/media/holberton-logo.24bab5d633e36ca8d17e.jpg",
-    "static/media/close-icon.png": "/alx-react/0x01-react_intro/task_4/static/media/close-icon.188720608dcbabe706b2.png",
-    "index.html": "/alx-react/0x01-react_intro/task_4/index.html",
-    "main.e44a189a.css.map": "/alx-react/0x01-react_intro/task_4/static/css/main.e44a189a.css.map",
-    "main.44bfe1af.js.map": "/alx-react/0x01-react_intro/task_4/static/js/main.44bfe1af.js.map",
-    "453.59b8a61b.chunk.js.map": "/alx-react/0x01-react_intro/task_4/static/js/453.59b8a61b.chunk.js.map"
+    "main.css": "/alx-react/0x01-react_intro/task_4/dashboard/static/css/main.e44a189a.css",
+    "main.js": "/alx-react/0x01-react_intro/task_4/dashboard/static/js/main.6f59f716.js",
+    "static/js/453.59b8a61b.chunk.js": "/alx-react/0x01-react_intro/task_4/dashboard/static/js/453.59b8a61b.chunk.js",
+    "static/media/holberton-logo.jpg": "/alx-react/0x01-react_intro/task_4/dashboard/static/media/holberton-logo.24bab5d633e36ca8d17e.jpg",
+    "static/media/close-icon.png": "/alx-react/0x01-react_intro/task_4/dashboard/static/media/close-icon.188720608dcbabe706b2.png",
+    "index.html": "/alx-react/0x01-react_intro/task_4/dashboard/index.html",
+    "main.e44a189a.css.map": "/alx-react/0x01-react_intro/task_4/dashboard/static/css/main.e44a189a.css.map",
+    "main.6f59f716.js.map": "/alx-react/0x01-react_intro/task_4/dashboard/static/js/main.6f59f716.js.map",
+    "453.59b8a61b.chunk.js.map": "/alx-react/0x01-react_intro/task_4/dashboard/static/js/453.59b8a61b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e44a189a.css",
-    "static/js/main.44bfe1af.js"
+    "static/js/main.6f59f716.js"
   ]
 }
