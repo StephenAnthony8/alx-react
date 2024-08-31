@@ -1,0 +1,16 @@
+.Notifications {
+    border:dotted #f41c43 2px;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin: 3px;
+}
+
+#default-priority {
+    color: #260160;
+}
+
+#urgent-priority {
+    color: #ff2222;
+}

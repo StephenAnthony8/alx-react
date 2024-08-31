@@ -1,0 +1,46 @@
+/* App */
+.App {
+    width: auto;
+}
+
+/* App-header */
+.App-header {
+    display: flex;
+    flex-direction: row;
+    height: calc(170px + 1vh);
+    border-bottom: solid #f41c43 4px;
+    align-items: center;
+}
+
+.App-header img {
+    height: 160px;
+}
+
+.App-header h1 {
+    padding: 0.5em;
+    color: #f41c43;
+    font-family: 'Helvetica';
+}
+
+/* App-body */
+.App-body {
+    margin: 2em;
+    padding-top: 0.5em;
+    font-family: sans-serif;
+}
+
+/* App-footer */
+.App-footer {
+    position: absolute;
+    bottom: 0;
+    border-top: solid #f41c43 4px;
+    height: 3.2em;
+    width: 100%;
+    text-align: center;
+}
+
+.App-footer p {
+    margin: 0.5em auto;
+    font-style:italic;
+    font-family: sans-serif;
+}
