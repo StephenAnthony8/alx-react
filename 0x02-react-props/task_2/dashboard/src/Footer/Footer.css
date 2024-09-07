@@ -1,0 +1,15 @@
+/* App-footer */
+.App-footer {
+    position: absolute;
+    bottom: 0; 
+    border-top: solid #f41c43 4px;
+    height: 3.2em;
+    width: 100%;
+    text-align: center;
+}
+
+.App-footer p {
+    margin: 0.5em auto;
+    font-style:italic;
+    font-family: sans-serif;
+}

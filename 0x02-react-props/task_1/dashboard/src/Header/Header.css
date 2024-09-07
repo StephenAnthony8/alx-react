@@ -1,0 +1,18 @@
+/* App-header */
+.App-header {
+    display: flex;
+    flex-direction: row;
+    height: calc(170px + 1vh);
+    border-bottom: solid #f41c43 4px;
+    align-items: center;
+}
+
+.App-header img {
+    height: 10rem;
+}
+
+.App-header h1 {
+    padding: 0.5em;
+    color: #f41c43;
+    font-family: 'Helvetica';
+}

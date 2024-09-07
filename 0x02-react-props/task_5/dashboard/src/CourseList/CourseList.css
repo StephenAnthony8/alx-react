@@ -1,0 +1,27 @@
+
+
+.courses {
+    height: calc(100% - (25.2em + 4px));
+    min-height: 180px;
+    overflow: auto;
+    margin: 2em;
+    padding: 1em;
+
+    text-align: left;
+}
+
+[colSpan="2"] {
+    text-align: center;
+}
+
+table {
+    width: 95%;
+    margin: auto;
+    padding: 0;
+    border: #e9e1e1 solid  2px;
+    
+}
+
+th {
+    border-bottom: #e9e1e1 solid  2px;
+}

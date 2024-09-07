@@ -1,0 +1,17 @@
+/* App-body */
+.App-body {
+    height:calc(100% - (26.2em + 4px));
+    min-height: 180px;
+    overflow: auto;
+    margin:2em;
+    padding: 1em;
+    font-family: sans-serif;
+}
+
+#email {
+    margin-right: 4px;
+}
+
+#password {
+    margin-right: 4px;
+}
