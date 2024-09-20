@@ -1,0 +1,9 @@
+/* BodySection styling */
+.bodySectionWithMargin {
+
+    /* height: calc(100% - (25.2em + 4px));
+    min-height: 10rem; */
+    overflow: auto;
+    margin: 1em;
+    margin-bottom: 40px;
+}
