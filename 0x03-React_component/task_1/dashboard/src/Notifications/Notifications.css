@@ -1,0 +1,33 @@
+/* notifications-container */
+#notifications-container {
+    position: absolute;
+    right: 0;
+    margin: 0.5em;
+    z-index: 10;
+    font-weight: 700;
+    background-color: white;
+}
+
+
+/* Notifications class */
+.Notifications {
+    border: dotted #f41c43 2px;
+    padding: 0.5em 0.5em 0 0.5em;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 3px;
+}
+
+[data-notification-type="default"] {
+    color: #260160;
+}
+
+[data-notification-type="urgent"],
+li strong {
+    color: #ff2222;
+}
+
+/* menuitem */
+.menuItem {
+    text-align: right;
+}
