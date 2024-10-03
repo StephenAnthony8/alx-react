@@ -1,108 +1,109 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, css } from 'aphrodite';
-import PropTypes from 'prop-types';
 
-class Login extends React.Component {
-	constructor(props) {
-		super(props);
+class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: '',
+      password: '',
+      enableSubmit: false,
+    };
+    this.handleLoginSubmit = this.handleLoginSubmit.bind(this);
+    this.handleChangeEmail = this.handleChangeEmail.bind(this);
+    this.handleChangePassword = this.handleChangePassword.bind(this);
+  }
 
-		this.handleLoginSubmit = this.handleLoginSubmit.bind(this);
-		this.handleChangeEmail = this.handleChangeEmail.bind(this);
-		this.handleChangePassword = this.handleChangePassword.bind(this);
-		this.state = {
-			email: '',
-			password: '',
-			enableSubmit: false,
-		};
-	}
+  handleLoginSubmit(e) {
+    e.preventDefault();
+    const { email, password } = this.state;
+    this.props.logIn(email, password);
+  }
 
-	handleLoginSubmit(e) {
-		e.preventDefault();
-		this.props.logIn(this.state.email, this.state.password);
-		this.setState({ isLoggedIn: true });
-	}
+  handleChangeEmail(e) {
+    const { value } = e.target;
+    const { password } = this.state;
 
-	handleChangeEmail(event) {
-		this.setState({ email: event.target.value });
-		this.state.email !== '' && this.state.password !== ''
-			? this.setState({ enableSubmit: true })
-			: this.setState({ enableSubmit: false });
-	}
+    if (value !== '' && password !== '') this.setState({ enableSubmit: true });
+    else this.setState({ enableSubmit: false });
 
-	handleChangePassword(event) {
-		this.setState({ password: event.target.value });
-		this.state.email !== '' && this.state.password !== ''
-			? this.setState({ enableSubmit: true })
-			: this.setState({ enableSubmit: false });
-	}
+    this.setState({ email: e.target.value });
+  }
 
-	render() {
-		return (
-			<>
-				<div className={css(styles.appBody, styles.small)}>
-					<h1>Log in to continue</h1>
-					<p>Login to access the full dashboard</p>
-					<form onSubmit={this.handleLoginSubmit}>
-						<label htmlFor='email'>Email: </label>
-						<input
-							className={css(styles.noBorder)}
-							type='email'
-							id='email'
-							name='email'
-							onChange={this.handleChangeEmail}
-							value={this.state.email}
-						/>
-						<label htmlFor='password'>Password: </label>
-						<input
-							className={css(styles.noBorder)}
-							type='password'
-							id='password'
-							name='password'
-							onChange={this.handleChangePassword}
-							value={this.state.password}
-						/>
-						<input
-							className={css(styles.yellowBorder)}
-							type='submit'
-							value='OK'
-							disabled={!this.state.enableSubmit}
-						/>
-					</form>
-				</div>
-			</>
-		);
-	}
+  handleChangePassword(e) {
+    const { value } = e.target;
+    const { email } = this.state;
+
+    if (email !== '' && value !== '') this.setState({ enableSubmit: true });
+    else this.setState({ enableSubmit: false });
+
+    this.setState({ password: e.target.value });
+  }
+
+  render() {
+    return (
+      <main role='main' className={css(styles.login)}>
+        <p>Login to access the full dashboard</p>
+        <form action='' onSubmit={this.handleLoginSubmit}>
+          <label htmlFor='email'>Email:</label>
+          <input
+            type='email'
+            id='email'
+            name='email'
+            className={css(styles.inp)}
+            value={this.state.email}
+            onChange={this.handleChangeEmail}
+          />
+          <label htmlFor='password'>Password:</label>
+          <input
+            type='password'
+            id='password'
+            name='password'
+            className={css(styles.inp)}
+            value={this.state.password}
+            onChange={this.handleChangePassword}
+          />
+          <button
+            type='submit'
+            className={css(styles.btn)}
+            disabled={!this.state.enableSubmit}
+          >
+            OK
+          </button>
+        </form>
+      </main>
+    );
+  }
 }
-
-Login.propTypes = {
-	logIn: PropTypes.func,
+const screenSize = {
+  small: '@media screen and (max-width: 900px)',
 };
 
 const styles = StyleSheet.create({
-	appBody: {
-		minHeight: '50vh',
-		textAlign: 'left',
-		marginTop: '2rem',
-		marginLeft: '2rem',
-	},
-	small: {
-		'@media (max-width: 900px)': {
-			display: 'grid',
-			justifyContent: 'center',
-		},
-	},
-	noBorder: {
-		'@media (max-width: 900px)': {
-			border: 'none',
-		},
-	},
-	yellowBorder: {
-		'@media (max-width: 900px)': {
-			border: '2px solid gold',
-			backgroundColor: 'transparent',
-			width: '5vw',
-		},
-	},
+  login: {
+    padding: '16px 24px',
+    [screenSize.small]: {
+      width: '90%',
+      padding: 0,
+    },
+  },
+  inp: {
+    margin: '4px',
+    [screenSize.small]: {
+      display: 'block',
+      border: 'none',
+      margin: 0,
+    },
+  },
+  btn: {
+    margin: '4px',
+    cursor: 'pointer',
+    [screenSize.small]: {
+      width: '32px',
+      display: 'block',
+      margin: 0,
+    },
+  },
 });
 
 export default Login;

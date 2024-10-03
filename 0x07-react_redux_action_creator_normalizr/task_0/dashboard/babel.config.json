@@ -1,8 +1,0 @@
-{
-  "presets": [
-    ["@babel/preset-env", {"targets": {"node": "current"}}],
-    /* allows for the preset to be used regardless of webpack mode */
-    /* just include it, research on it if you forgot */
-    ["@babel/preset-react", {"runtime": "automatic"}]
-  ]
-}
